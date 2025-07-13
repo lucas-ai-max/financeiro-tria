@@ -9,7 +9,7 @@ import { useToast } from '@/hooks/use-toast';
 
 const UploadPage = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [webhookUrl, setWebhookUrl] = useState('');
+  const [webhookUrl, setWebhookUrl] = useState('https://webhook.plxdigital.com.br/webhook/receber-whatsapp-doc');
   const [isUploading, setIsUploading] = useState(false);
   const [isDragOver, setIsDragOver] = useState(false);
   const { toast } = useToast();
