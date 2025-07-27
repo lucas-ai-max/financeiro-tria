@@ -17,16 +17,16 @@ All colors MUST be HSL.
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 142 76% 36%;
-    --primary-foreground: 355 7% 97%;
+    --primary: 347 77% 50%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 347 25% 85%;
+    --secondary-foreground: 347 77% 20%;
 
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
 
-    --accent: 240 3.7% 15.9%;
+    --accent: 347 40% 60%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
@@ -34,12 +34,12 @@ All colors MUST be HSL.
 
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 142 76% 36%;
+    --ring: 347 77% 50%;
 
     --upload-area: 240 4.8% 20%;
     --upload-area-hover: 240 4.8% 25%;
-    --upload-area-border: 142 76% 36%;
-    --success: 142 76% 36%;
+    --upload-area-border: 347 77% 50%;
+    --success: 347 77% 50%;
     --success-foreground: 355 7% 97%;
 
     --radius: 0.5rem;

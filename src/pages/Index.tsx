@@ -2,6 +2,7 @@ import { FileSpreadsheet, Upload, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
+import logoTriaa from '@/assets/logo-triaa.png';
 
 const Index = () => {
   return (
@@ -10,9 +11,11 @@ const Index = () => {
         {/* Hero Section */}
         <div className="text-center space-y-6 mb-12">
           <div className="flex justify-center mb-6">
-            <div className="p-4 bg-primary/10 rounded-full">
-              <FileSpreadsheet className="h-12 w-12 text-primary" />
-            </div>
+            <img 
+              src={logoTriaa} 
+              alt="Triaa Logo" 
+              className="h-20 w-auto"
+            />
           </div>
           <h1 className="text-4xl font-bold text-foreground mb-4">
             Sistema de Upload de Planilhas

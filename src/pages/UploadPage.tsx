@@ -1,6 +1,7 @@
 import React from 'react';
 import { UploadSection } from '@/components/upload/UploadSection';
 import { InstructionsCard } from '@/components/upload/InstructionsCard';
+import logoTriaa from '@/assets/logo-triaa.png';
 
 const UploadPage = () => {
   const defaultWebhookUrl = 'https://webhook.plxdigital.com.br/webhook/receber-whatsapp-doc';
@@ -9,7 +10,14 @@ const UploadPage = () => {
     <div className="min-h-screen bg-background py-8 px-4">
       <div className="max-w-6xl mx-auto space-y-8">
         {/* Header */}
-        <div className="text-center space-y-2">
+        <div className="text-center space-y-4">
+          <div className="flex justify-center mb-4">
+            <img 
+              src={logoTriaa} 
+              alt="Triaa Logo" 
+              className="h-16 w-auto"
+            />
+          </div>
           <h1 className="text-3xl font-bold text-foreground">Upload de Planilhas</h1>
           <p className="text-muted-foreground">
             Envie suas planilhas diretamente para o N8N via webhook
