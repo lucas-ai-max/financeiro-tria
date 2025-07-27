@@ -11,12 +11,14 @@ interface UploadSectionProps {
   title: string;
   uploadId: string;
   defaultWebhookUrl: string;
+  fixedWebhook?: boolean;
 }
 
 export const UploadSection: React.FC<UploadSectionProps> = ({
   title,
   uploadId,
-  defaultWebhookUrl
+  defaultWebhookUrl,
+  fixedWebhook = false
 }) => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [webhookUrl, setWebhookUrl] = useState(defaultWebhookUrl);
@@ -150,49 +152,47 @@ export const UploadSection: React.FC<UploadSectionProps> = ({
   };
 
   return (
-    <div className="space-y-6">
-      <WebhookConfig
-        title={title}
-        webhookUrl={webhookUrl}
-        setWebhookUrl={setWebhookUrl}
-        uploadId={uploadId}
-      />
-
-      <Card className="border-border bg-card">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Upload className="h-5 w-5 text-primary" />
-            {title} - Upload de Arquivo
-          </CardTitle>
-          <CardDescription>
-            Arraste e solte ou clique para selecionar uma planilha (.xlsx, .xls, .csv, .ods)
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <UploadArea
-            selectedFile={selectedFile}
-            isDragOver={isDragOver}
-            onDragOver={handleDragOver}
-            onDragLeave={handleDragLeave}
-            onDrop={handleDrop}
-            onFileInputChange={handleFileInputChange}
-            onRemoveFile={removeFile}
-            acceptedFileTypes={acceptedFileTypes}
+    <Card className="border-border bg-card">
+      <CardContent className="p-6 space-y-4">
+        {!fixedWebhook && (
+          <WebhookConfig 
+            title={title}
             uploadId={uploadId}
-            formatFileSize={formatFileSize}
-          />
-
-          <Separator className="my-6" />
-
-          <SendButton
-            onSend={sendToN8N}
-            disabled={!selectedFile || !webhookUrl || isUploading}
-            isUploading={isUploading}
-            selectedFile={selectedFile}
             webhookUrl={webhookUrl}
+            setWebhookUrl={setWebhookUrl}
           />
-        </CardContent>
-      </Card>
-    </div>
+        )}
+        
+        {fixedWebhook && (
+          <div className="space-y-2">
+            <label className="text-sm font-medium text-foreground">Webhook URL (Fixo)</label>
+            <div className="p-3 bg-muted rounded-md">
+              <p className="text-sm text-muted-foreground font-mono break-all">{webhookUrl}</p>
+            </div>
+          </div>
+        )}
+
+        <UploadArea
+          selectedFile={selectedFile}
+          isDragOver={isDragOver}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+          onFileInputChange={handleFileInputChange}
+          onRemoveFile={removeFile}
+          acceptedFileTypes={acceptedFileTypes}
+          uploadId={uploadId}
+          formatFileSize={formatFileSize}
+        />
+
+        <SendButton
+          onSend={sendToN8N}
+          disabled={!selectedFile || !webhookUrl || isUploading}
+          isUploading={isUploading}
+          selectedFile={selectedFile}
+          webhookUrl={webhookUrl}
+        />
+      </CardContent>
+    </Card>
   );
 };

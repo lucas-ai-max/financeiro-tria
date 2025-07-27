@@ -4,11 +4,42 @@ import { InstructionsCard } from '@/components/upload/InstructionsCard';
 import logoTriaa from '@/assets/logo-triaa.png';
 
 const UploadPage = () => {
-  const defaultWebhookUrl = 'https://webhook.plxdigital.com.br/webhook/receber-whatsapp-doc';
+  const uploadSections = [
+    {
+      title: "Conta corrente Itau",
+      uploadId: "cc-itau",
+      webhookUrl: "https://webhook.plxdigital.com.br/webhook/receber-whatsapp-doc/cc_itau"
+    },
+    {
+      title: "Cartão itaú", 
+      uploadId: "cartao-normal",
+      webhookUrl: "https://webhook.plxdigital.com.br/webhook/receber-whatsapp-doc/cartao_normal"
+    },
+    {
+      title: "Cartão black",
+      uploadId: "cartao-black", 
+      webhookUrl: "https://webhook.plxdigital.com.br/webhook/receber-whatsapp-doc/cartao_black"
+    },
+    {
+      title: "EXO participações",
+      uploadId: "exo-participacao",
+      webhookUrl: "https://webhook.plxdigital.com.br/webhook/receber-whatsapp-doc/exo_participacao"
+    },
+    {
+      title: "Oliveira Participações", 
+      uploadId: "oliveira-participacao",
+      webhookUrl: "https://webhook.plxdigital.com.br/webhook/receber-whatsapp-doc/oliveira_participacao"
+    },
+    {
+      title: "EXO loteamento",
+      uploadId: "exo-loteamento",
+      webhookUrl: "https://webhook.plxdigital.com.br/webhook/receber-whatsapp-doc/exo_loteamento"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-background py-8 px-4">
-      <div className="max-w-6xl mx-auto space-y-8">
+      <div className="max-w-7xl mx-auto space-y-8">
         {/* Header */}
         <div className="text-center space-y-4">
           <div className="flex justify-center mb-4">
@@ -24,26 +55,18 @@ const UploadPage = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Upload 1 */}
-          <div>
-            <h2 className="text-xl font-semibold text-foreground mb-4">Upload 1</h2>
-            <UploadSection
-              title="Upload 1"
-              uploadId="upload-1"
-              defaultWebhookUrl={defaultWebhookUrl}
-            />
-          </div>
-
-          {/* Upload 2 */}
-          <div>
-            <h2 className="text-xl font-semibold text-foreground mb-4">Upload 2</h2>
-            <UploadSection
-              title="Upload 2"
-              uploadId="upload-2"
-              defaultWebhookUrl={defaultWebhookUrl}
-            />
-          </div>
+        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-6">
+          {uploadSections.map((section) => (
+            <div key={section.uploadId}>
+              <h2 className="text-lg font-semibold text-foreground mb-4">{section.title}</h2>
+              <UploadSection
+                title={section.title}
+                uploadId={section.uploadId}
+                defaultWebhookUrl={section.webhookUrl}
+                fixedWebhook={true}
+              />
+            </div>
+          ))}
         </div>
 
         {/* Instructions */}
