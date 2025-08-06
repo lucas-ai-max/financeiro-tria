@@ -8,32 +8,32 @@ const UploadPage = () => {
     {
       title: "Conta corrente Itau",
       uploadId: "cc-itau",
-      webhookUrl: "https://webhook.plxdigital.com.br/webhook/receber-whatsapp-doc/cc_itau"
+      webhookUrl: "https://webhook.triacompany.com.br/webhook/receber-whatsapp-doc/cc_itau"
     },
     {
       title: "Cartão itaú", 
       uploadId: "cartao-normal",
-      webhookUrl: "https://webhook.plxdigital.com.br/webhook/receber-whatsapp-doc/cartao_normal"
+      webhookUrl: "https://webhook.triacompany.com.br/webhook/receber-whatsapp-doc/cartao_normal"
     },
     {
       title: "Cartão black",
       uploadId: "cartao-black", 
-      webhookUrl: "https://webhook.plxdigital.com.br/webhook/receber-whatsapp-doc/cartao_black"
+      webhookUrl: "https://webhook.triacompany.com.br/webhook/receber-whatsapp-doc/cartao_black"
     },
     {
       title: "EXO participações",
       uploadId: "exo-participacao",
-      webhookUrl: "https://webhook.plxdigital.com.br/webhook/receber-whatsapp-doc/exo_participacao"
+      webhookUrl: "https://webhook.triacompany.com.br/webhook/receber-whatsapp-doc/exo_participacao"
     },
     {
       title: "Oliveira Participações", 
       uploadId: "oliveira-participacao",
-      webhookUrl: "https://webhook.plxdigital.com.br/webhook/receber-whatsapp-doc/oliveira_participacao"
+      webhookUrl: "https://webhook.triacompany.com.br/webhook/receber-whatsapp-doc/oliveira_participacao"
     },
     {
       title: "EXO loteamento",
       uploadId: "exo-loteamento",
-      webhookUrl: "https://webhook.plxdigital.com.br/webhook/receber-whatsapp-doc/exo_loteamento"
+      webhookUrl: "https://webhook.triacompany.com.br/webhook/receber-whatsapp-doc/exo_loteamento"
     }
   ];
 
