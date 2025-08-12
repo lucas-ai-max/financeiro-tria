@@ -56,7 +56,9 @@ const UploadPage = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-6">
-          {uploadSections.map((section) => (
+          {uploadSections
+            .filter((s) => !['exo-participacao', 'oliveira-participacao', 'exo-loteamento'].includes(s.uploadId))
+            .map((section) => (
             <div key={section.uploadId}>
               <h2 className="text-lg font-semibold text-foreground mb-4">{section.title}</h2>
               <UploadSection
