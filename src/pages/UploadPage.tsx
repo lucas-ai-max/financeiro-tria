@@ -6,34 +6,14 @@ import logoTriaa from '@/assets/logo-triaa.png';
 const UploadPage = () => {
   const uploadSections = [
     {
-      title: "Conta corrente Itau",
-      uploadId: "cc-itau",
-      webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/cc_itau"
-    },
-    {
-      title: "Cartão itaú", 
+      title: "Cartões",
       uploadId: "cartao-normal",
       webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/cartao_normal"
     },
     {
-      title: "Cartão black",
-      uploadId: "cartao-black", 
-      webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/cartao_black"
-    },
-    {
-      title: "EXO participações",
-      uploadId: "exo-participacao",
-      webhookUrl: "https://webhook.triacompany.com.br/webhook/receber-whatsapp-doc/exo_participacao"
-    },
-    {
-      title: "Oliveira Participações", 
-      uploadId: "oliveira-participacao",
-      webhookUrl: "https://webhook.triacompany.com.br/webhook/receber-whatsapp-doc/oliveira_participacao"
-    },
-    {
-      title: "EXO loteamento",
-      uploadId: "exo-loteamento",
-      webhookUrl: "https://webhook.triacompany.com.br/webhook/receber-whatsapp-doc/exo_loteamento"
+      title: "Extrato", 
+      uploadId: "cc-itau",
+      webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/cc_itau"
     }
   ];
 
@@ -55,10 +35,8 @@ const UploadPage = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-6">
-          {uploadSections
-            .filter((s) => !['exo-participacao', 'oliveira-participacao', 'exo-loteamento'].includes(s.uploadId))
-            .map((section) => (
+        <div className="grid lg:grid-cols-2 gap-6">
+          {uploadSections.map((section) => (
             <div key={section.uploadId}>
               <h2 className="text-lg font-semibold text-foreground mb-4">{section.title}</h2>
               <UploadSection
