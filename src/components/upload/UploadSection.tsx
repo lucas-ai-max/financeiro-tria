@@ -111,14 +111,18 @@ export const UploadSection: React.FC<UploadSectionProps> = ({
 
     try {
       const formData = new FormData();
-      formData.append('file', selectedFile);
+      formData.append('file', selectedFile, selectedFile.name);
       formData.append('filename', selectedFile.name);
+      formData.append('mimetype', selectedFile.type);
       formData.append('filesize', selectedFile.size.toString());
       formData.append('timestamp', new Date().toISOString());
       formData.append('source', `planilha-${uploadId}`);
 
       const response = await fetch(webhookUrl, {
         method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+        },
         body: formData,
       });
 
