@@ -6,14 +6,34 @@ import logoTriaa from '@/assets/logo-triaa.png';
 const UploadPage = () => {
   const uploadSections = [
     {
-      title: "Cartões",
-      uploadId: "cartao-normal",
-      webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/cartao_normal"
+      title: "Nubank",
+      uploadId: "nubank",
+      webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/nubank"
     },
     {
-      title: "Extrato", 
-      uploadId: "cc-itau",
-      webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/cc_itau"
+      title: "Itaú Unibanco", 
+      uploadId: "itau-unibanco",
+      webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/itau_unibanco"
+    },
+    {
+      title: "BTG Pactual",
+      uploadId: "btg-pactual",
+      webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/btg_pactual"
+    },
+    {
+      title: "BTG Cartão", 
+      uploadId: "btg-cartao",
+      webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/btg_cartao"
+    },
+    {
+      title: "Nubank Violeta",
+      uploadId: "nubank-violeta",
+      webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/nubank_violeta"
+    },
+    {
+      title: "Personallite Black", 
+      uploadId: "personallite-black",
+      webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/personallite_black"
     }
   ];
 
@@ -35,7 +55,7 @@ const UploadPage = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
           {uploadSections.map((section) => (
             <div key={section.uploadId}>
               <h2 className="text-lg font-semibold text-foreground mb-4">{section.title}</h2>
