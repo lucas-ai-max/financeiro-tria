@@ -4,7 +4,7 @@ import { InstructionsCard } from '@/components/upload/InstructionsCard';
 import logoTriaa from '@/assets/logo-triaa.png';
 
 const UploadPage = () => {
-  const uploadSections = [
+  const bankSections = [
     {
       title: "Nubank",
       uploadId: "nubank",
@@ -19,7 +19,10 @@ const UploadPage = () => {
       title: "BTG Pactual",
       uploadId: "btg-pactual",
       webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/btg_pactual"
-    },
+    }
+  ];
+
+  const cardSections = [
     {
       title: "BTG Cartão", 
       uploadId: "btg-cartao",
@@ -55,18 +58,40 @@ const UploadPage = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-          {uploadSections.map((section) => (
-            <div key={section.uploadId}>
-              <h2 className="text-lg font-semibold text-foreground mb-4">{section.title}</h2>
-              <UploadSection
-                title={section.title}
-                uploadId={section.uploadId}
-                defaultWebhookUrl={section.webhookUrl}
-                fixedWebhook={true}
-              />
-            </div>
-          ))}
+        {/* Bancos Section */}
+        <div className="space-y-6">
+          <h2 className="text-2xl font-bold text-foreground text-center">Bancos</h2>
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {bankSections.map((section) => (
+              <div key={section.uploadId}>
+                <h3 className="text-lg font-semibold text-foreground mb-4">{section.title}</h3>
+                <UploadSection
+                  title={section.title}
+                  uploadId={section.uploadId}
+                  defaultWebhookUrl={section.webhookUrl}
+                  fixedWebhook={true}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Cartões Section */}
+        <div className="space-y-6">
+          <h2 className="text-2xl font-bold text-foreground text-center">Cartões</h2>
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {cardSections.map((section) => (
+              <div key={section.uploadId}>
+                <h3 className="text-lg font-semibold text-foreground mb-4">{section.title}</h3>
+                <UploadSection
+                  title={section.title}
+                  uploadId={section.uploadId}
+                  defaultWebhookUrl={section.webhookUrl}
+                  fixedWebhook={true}
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Instructions */}
