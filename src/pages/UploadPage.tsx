@@ -59,8 +59,10 @@ const UploadPage = () => {
         </div>
 
         {/* Bancos Section */}
-        <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-foreground text-center">Bancos</h2>
+        <div className="p-6 border border-border rounded-lg bg-card">
+          <h2 className="text-2xl font-bold bg-gradient-green bg-clip-text text-transparent text-center mb-6">
+            Bancos
+          </h2>
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
             {bankSections.map((section) => (
               <div key={section.uploadId}>
@@ -77,8 +79,10 @@ const UploadPage = () => {
         </div>
 
         {/* Cartões Section */}
-        <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-foreground text-center">Cartões</h2>
+        <div className="p-6 border border-border rounded-lg bg-card">
+          <h2 className="text-2xl font-bold bg-gradient-green bg-clip-text text-transparent text-center mb-6">
+            Cartões
+          </h2>
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
             {cardSections.map((section) => (
               <div key={section.uploadId}>

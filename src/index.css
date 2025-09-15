@@ -42,6 +42,8 @@ All colors MUST be HSL.
     --success: 78 53% 58%;
     --success-foreground: 355 7% 97%;
 
+    --gradient-green: linear-gradient(135deg, hsl(78 53% 58%), hsl(78 40% 65%));
+
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
