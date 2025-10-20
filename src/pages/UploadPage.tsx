@@ -37,6 +37,11 @@ const UploadPage = () => {
       title: "Personallite Black", 
       uploadId: "personallite-black",
       webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/personallite_black"
+    },
+    {
+      title: "Azul Infinity",
+      uploadId: "azul-infinity",
+      webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/azul_infinity"
     }
   ];
 
