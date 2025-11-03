@@ -8,17 +8,17 @@ const UploadPage = () => {
     {
       title: "Nubank",
       uploadId: "nubank",
-      webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/nubank"
+      webhookUrl: "https://webhook.triacompany.com.br/webhook/receber-whatsapp-doc/nubank"
     },
     {
       title: "Itaú Unibanco", 
       uploadId: "itau-unibanco",
-      webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/itau_unibanco"
+      webhookUrl: "https://webhook.triacompany.com.br/webhook/receber-whatsapp-doc/itau_unibanco"
     },
     {
       title: "BTG Pactual",
       uploadId: "btg-pactual",
-      webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/btg_pactual"
+      webhookUrl: "https://webhook.triacompany.com.br/webhook/receber-whatsapp-doc/btg_pactual"
     }
   ];
 
@@ -26,22 +26,22 @@ const UploadPage = () => {
     {
       title: "BTG Cartão", 
       uploadId: "btg-cartao",
-      webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/btg_cartao"
+      webhookUrl: "https://webhook.triacompany.com.br/webhook/receber-whatsapp-doc/btg_cartao"
     },
     {
       title: "Nubank Violeta",
       uploadId: "nubank-violeta",
-      webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/nubank_violeta"
+      webhookUrl: "https://webhook.triacompany.com.br/webhook/receber-whatsapp-doc/nubank_violeta"
     },
     {
       title: "Personallite Black", 
       uploadId: "personallite-black",
-      webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/personallite_black"
+      webhookUrl: "https://webhook.triacompany.com.br/webhook/receber-whatsapp-doc/personallite_black"
     },
     {
       title: "Azul Infinity",
       uploadId: "azul-infinity",
-      webhookUrl: "https://webhook.tc1.triacompany.com.br/webhook/receber-whatsapp-doc/azul_infinity"
+      webhookUrl: "https://webhook.triacompany.com.br/webhook/receber-whatsapp-doc/azul_infinity"
     }
   ];
 
