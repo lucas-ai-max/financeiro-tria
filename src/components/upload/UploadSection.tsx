@@ -26,19 +26,20 @@ export const UploadSection: React.FC<UploadSectionProps> = ({
   const [isDragOver, setIsDragOver] = useState(false);
   const { toast } = useToast();
 
-  const acceptedFileTypes = '.xlsx,.xls,.csv,.ods';
+  const acceptedFileTypes = '.xlsx,.xls,.csv,.ods,.pdf';
   const maxFileSize = 10 * 1024 * 1024; // 10MB
 
   const validateFile = (file: File): boolean => {
     const validTypes = ['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 
                        'application/vnd.ms-excel', 
                        'text/csv', 
-                       'application/vnd.oasis.opendocument.spreadsheet'];
+                       'application/vnd.oasis.opendocument.spreadsheet',
+                       'application/pdf'];
     
-    if (!validTypes.includes(file.type) && !file.name.match(/\.(xlsx|xls|csv|ods)$/i)) {
+    if (!validTypes.includes(file.type) && !file.name.match(/\.(xlsx|xls|csv|ods|pdf)$/i)) {
       toast({
         title: "Tipo de arquivo inválido",
-        description: "Por favor, selecione um arquivo de planilha (.xlsx, .xls, .csv, .ods)",
+        description: "Por favor, selecione um arquivo válido (.xlsx, .xls, .csv, .ods, .pdf)",
         variant: "destructive",
       });
       return false;
@@ -126,7 +127,7 @@ export const UploadSection: React.FC<UploadSectionProps> = ({
       if (response.ok) {
         toast({
           title: `Sucesso! (${title})`,
-          description: "Planilha enviada para o N8N com sucesso",
+          description: "Arquivo enviado para o N8N com sucesso",
         });
         setSelectedFile(null);
       } else {
