@@ -51,13 +51,13 @@ export const UploadArea: React.FC<UploadAreaProps> = ({
           <Upload className="h-12 w-12 text-muted-foreground mx-auto" />
           <div className="space-y-2">
             <p className="text-lg font-medium text-foreground">
-              Arraste sua planilha aqui
+              Arraste seu arquivo aqui
             </p>
             <p className="text-sm text-muted-foreground">
               ou clique para selecionar um arquivo
             </p>
             <p className="text-xs text-muted-foreground">
-              Formatos aceitos: .xlsx, .xls, .csv, .ods (máx. 10MB)
+              Formatos aceitos: .xlsx, .xls, .csv, .ods, .pdf (máx. 10MB)
             </p>
           </div>
         </div>
