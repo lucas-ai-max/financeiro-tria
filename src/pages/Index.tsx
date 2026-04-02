@@ -78,12 +78,20 @@ const Index = () => {
               <p className="text-muted-foreground mb-6">
                 Configure seu webhook e envie sua primeira planilha em segundos
               </p>
-              <Link to="/upload">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  Fazer Upload de Planilha
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
+              <div className="flex gap-4 justify-center flex-wrap">
+                <Link to="/upload">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                    Fazer Upload de Planilha
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+                <Link to="/notas-fiscais">
+                  <Button size="lg" variant="outline">
+                    <FileSpreadsheet className="mr-2 h-4 w-4" />
+                    Controle de Notas Fiscais
+                  </Button>
+                </Link>
+              </div>
             </CardContent>
           </Card>
         </div>
