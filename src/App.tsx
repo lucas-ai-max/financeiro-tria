@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import UploadPage from "./pages/UploadPage";
 import NotasFiscais from "./pages/NotasFiscais";
 import NotFound from "./pages/NotFound";
+import { Navbar } from "./components/Navbar";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/upload" element={<UploadPage />} />

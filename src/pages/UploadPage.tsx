@@ -1,7 +1,6 @@
 import React from 'react';
 import { UploadSection } from '@/components/upload/UploadSection';
 import { InstructionsCard } from '@/components/upload/InstructionsCard';
-import logoTriaa from '@/assets/logo-triaa.png';
 
 const UploadPage = () => {
   const bankSections = [
@@ -50,14 +49,7 @@ const UploadPage = () => {
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Header */}
         <div className="text-center space-y-4">
-          <div className="flex justify-center mb-4">
-            <img 
-              src={logoTriaa} 
-              alt="Triaa Logo" 
-              className="h-16 w-auto"
-            />
-          </div>
-          <h1 className="text-3xl font-bold text-foreground">Upload de Planilhas</h1>
+          <h1 className="text-3xl font-bold text-foreground">Upload de Faturas - Marcos</h1>
           <p className="text-muted-foreground">
             Envie suas planilhas diretamente para o N8N via webhook
           </p>

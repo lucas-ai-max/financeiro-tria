@@ -3,8 +3,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { Plus, ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Plus } from "lucide-react";
 import { RelatorioMacro } from "@/components/notas-fiscais/RelatorioMacro";
 import { FiltrosTransacoes, type Filtros } from "@/components/notas-fiscais/FiltrosTransacoes";
 import { NotasFiscaisTable } from "@/components/notas-fiscais/NotasFiscaisTable";
@@ -143,12 +142,7 @@ export default function NotasFiscais() {
   return (
     <div className="min-h-screen bg-background p-6 space-y-6">
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <Link to="/">
-            <Button variant="ghost" size="icon"><ArrowLeft className="h-5 w-5" /></Button>
-          </Link>
-          <h1 className="text-2xl font-bold text-foreground">Controle de Notas Fiscais</h1>
-        </div>
+        <h1 className="text-2xl font-bold text-foreground">Controle de Notas Fiscais</h1>
         <Button onClick={() => { setEditing(null); setFormOpen(true); }}>
           <Plus className="h-4 w-4 mr-2" /> Nova Transação
         </Button>
