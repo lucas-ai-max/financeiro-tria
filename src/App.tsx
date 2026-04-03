@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Index from "./pages/Index";
 import UploadPage from "./pages/UploadPage";
 import NotasFiscais from "./pages/NotasFiscais";
+import Produtos from "./pages/Produtos";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import { Navbar } from "./components/Navbar";
@@ -29,6 +30,7 @@ const ProtectedApp = () => {
         <Route path="/" element={<Index />} />
         <Route path="/upload" element={<UploadPage />} />
         <Route path="/notas-fiscais" element={<NotasFiscais />} />
+        <Route path="/produtos" element={<Produtos />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -1,4 +1,4 @@
-import { FileSpreadsheet, Upload, LogOut, ChevronRight } from 'lucide-react';
+import { FileSpreadsheet, Upload, LogOut, ChevronRight, Package } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logoTriaa from '@/assets/logo-triaa.png';
 import { useAuth } from '@/contexts/AuthContext';
@@ -23,6 +23,19 @@ const Index = () => {
               <div className="flex-1 text-left">
                 <p className="font-medium text-slate-100">Controle de Notas Fiscais</p>
                 <p className="text-sm text-slate-500">Gerenciar e consultar notas</p>
+              </div>
+              <ChevronRight className="h-4 w-4 text-slate-600 transition-transform group-hover:translate-x-1 group-hover:text-slate-400" />
+            </div>
+          </Link>
+
+          <Link to="/produtos" className="block group">
+            <div className="flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-900/80 px-6 py-5 shadow-sm transition-all hover:shadow-lg hover:shadow-amber-500/5 hover:border-slate-700 hover:-translate-y-0.5">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-500/10 text-amber-400">
+                <Package className="h-5 w-5" />
+              </div>
+              <div className="flex-1 text-left">
+                <p className="font-medium text-slate-100">Produtos - Emissão de Notas</p>
+                <p className="text-sm text-slate-500">Cadastrar e gerenciar produtos</p>
               </div>
               <ChevronRight className="h-4 w-4 text-slate-600 transition-transform group-hover:translate-x-1 group-hover:text-slate-400" />
             </div>

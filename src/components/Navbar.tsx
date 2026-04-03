@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { FileSpreadsheet, Upload } from "lucide-react";
+import { FileSpreadsheet, Upload, Package } from "lucide-react";
 import logoTriaa from "@/assets/logo-triaa.png";
 import { cn } from "@/lib/utils";
 
@@ -8,6 +8,11 @@ const navItems = [
     label: "Controle de Notas",
     href: "/notas-fiscais",
     icon: FileSpreadsheet,
+  },
+  {
+    label: "Produtos Emissão Notas",
+    href: "/produtos",
+    icon: Package,
   },
   {
     label: "Upload Faturas Marcos",
